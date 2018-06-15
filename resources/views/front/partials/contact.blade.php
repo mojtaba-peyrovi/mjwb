@@ -47,32 +47,32 @@
 
 
 
-  <div class="container mt-3">
-    <div class="form">
-      <div id="sendmessage">Your message has been sent. Thank you!</div>
-      <div id="errormessage"></div>
-      <form action="" method="post" role="form" class="contactForm">
+  <div class="container mt-5">
+    <form class="" action="/" method="post">
+        {{ csrf_field() }}
+
         <div class="form-row">
           <div class="form-group col-md-6">
-            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-            <div class="validation"></div>
+            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name"/>
           </div>
+
           <div class="form-group col-md-6">
-            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-            <div class="validation"></div>
+            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email"/>
           </div>
         </div>
+
         <div class="form-group">
-          <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-          <div class="validation"></div>
+          <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject"/>
         </div>
+
         <div class="form-group">
-          <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-          <div class="validation"></div>
+          <textarea class="form-control" name="message" rows="5"placeholder="Message"></textarea>
         </div>
-        <div class="text-center"><button type="submit">Send Message</button></div>
-      </form>
-    </div>
+
+
+        <button type="submit" id="sendmessage" style="color: #00cc99;border: 1px solid #00cc99;text-align: center;padding: 15px;font-weight: 600;margin-bottom: 15px;">Submit</button>
+    </form>
+
 
   </div>
 </section><!-- #contact -->

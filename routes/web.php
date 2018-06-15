@@ -18,3 +18,4 @@ Route::get('/', function () {
 Route::get('/master', function () {
     return view('front.master');
 });
+Route::post('/', 'MessageController@store');
