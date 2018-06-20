@@ -41,6 +41,7 @@ class MessageController extends Controller
             'subject' => request('subject'),
             'message' => request('message')
         ]);
+        flash('Your Message Has Arrived! Thank you.')->success();
         return redirect('/');
     }
 

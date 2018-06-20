@@ -8,9 +8,12 @@
 
     @include('front.partials.header')
 
+    @include('flash::message')
+
     @include('front.partials.intro')
 
     <main id="main">
+
 
         @include('front.partials.about')
 
@@ -55,9 +58,15 @@
 @endsection
 @section('scripts')
     <script type="text/javascript">
+        console.log('works');
+        $('div.alert').not('.alert-important').delay(3000).fadeOut(350);
+    </script>
+    <script type="text/javascript">
         var infoWindow = new SnazzyInfoWindow({
         marker: marker,
         content: 'Snazzy!'
         });
+
+
     </script>
 @endsection
